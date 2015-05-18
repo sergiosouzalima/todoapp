@@ -5,13 +5,13 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = 'a1db7676c2f989852fdc8ce90b4bbfc18741a57355670cbbc2ba0feeb29ea0b1049dadfb69dfb6321645422cac4268ec00ae21c4605fb137749ebbefef027229'
+  config.secret_key = '9747c5e98f6e0c0997985bc526f1846c5a761b2f94f001d3f7288035dfbbfcfd48f8d30f70e2cb25e987484a7400c62e3129d71e0800b896b6625595ca41cc9f'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'no-reply@' + "todoappv1.herokuapp.com" #Rails.application.secrets.domain_name
-
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
