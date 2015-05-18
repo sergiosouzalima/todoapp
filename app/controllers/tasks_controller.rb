@@ -4,7 +4,7 @@ class TasksController < ApplicationController
   respond_to :html
 
   def index
-    @tasks = Task.all.order(:user_id, :name)
+    @tasks = Task.where( "user_id = :current_user_id or public = :public", { current_user_id: current_user.id, public: "public" } ).order(:user_id, :name)
     respond_with(@tasks)
   end
 

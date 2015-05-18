@@ -12,6 +12,6 @@
     <strong>User:</strong>
     <%= @task.user.name unless @task.user.blank? %>
   </p>
-  <%= link_to_if is_edition_allowed?(@task), 'Editar', edit_task_path(@task) %> |
+  <%= link_to_if is_edition_allowed?(@task.user_id, current_user.id), 'Editar', edit_task_path(@task) %> |
   <%= link_to 'Voltar', tasks_path %>
 </div>

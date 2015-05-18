@@ -2,6 +2,7 @@
 require 'rails_helper'
 
 describe User do
+
   context "attributes validation" do
     context 'name' do
       it { should respond_to :name }
