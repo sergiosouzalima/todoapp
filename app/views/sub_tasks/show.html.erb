@@ -1,0 +1,9 @@
+<div class="authform">
+  <p>
+    <strong>Descrição da Sub Tarefa:</strong>
+    <%= @sub_task.name %>
+  </p>
+  <%= link_to 'Editar', edit_sub_task_path(@sub_task) %> |
+  <%= link_to 'Volta', sub_tasks_path( id: @sub_task.task_id ) %>
+</div>
+

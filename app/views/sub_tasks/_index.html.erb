@@ -1,0 +1,10 @@
+<% @sub_tasks.each do |sub_task| %>
+  <tr class="sub-task-row-<%=sub_task.id%>">
+    <td><%= sub_task.name %></td>
+    <td><%= link_to "Editar", edit_sub_task_path(sub_task) %></td>
+    <td>
+      <%= link_to "Excluir", sub_task, method: :delete, data: { confirm: 'Tem certeza?' }, remote: true %>
+    </td>
+  </tr>
+<% end %>
+

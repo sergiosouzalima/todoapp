@@ -1,0 +1,17 @@
+<div class="authform">
+  <h3>Tarefa</h3>
+  <p>
+    <strong>Descricao:</strong>
+    <%= @task.name %>
+  </p>
+  <p>
+    <strong>Publica?:</strong>
+    <%= @task.public %>
+  </p>
+  <p>
+    <strong>User:</strong>
+    <%= @task.user.name unless @task.user.blank? %>
+  </p>
+  <%= link_to_if is_edition_allowed?(@task), 'Editar', edit_task_path(@task) %> |
+  <%= link_to 'Voltar', tasks_path %>
+</div>
