@@ -15,7 +15,7 @@
       <tbody>
         <% @tasks.each do |task| %>
           <tr>
-            <td><strong><%= link_to_if is_edition_allowed?(task), task.name, edit_task_path(task) %></strong></td>
+            <td><strong><%= link_to_if is_edition_allowed?(task.user_id, task.public, current_user.id), task.name, edit_task_path(task) %></strong></td>
             <td><%= task.public %></td>
             <td><%= task.user.name unless task.user.blank? %></td>
             <td><%= link_to "#{task.sub_tasks.count} Itens", sub_tasks_path( id: task.id ) %></td>

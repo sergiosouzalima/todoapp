@@ -1,5 +1,11 @@
+# encoding : utf-8
 require 'rails_helper'
 
-RSpec.describe SubTask, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+describe SubTask do
+  context "attributes validation" do
+    context 'name' do
+      it { should respond_to :name }
+    end
+  end
+
+ end
