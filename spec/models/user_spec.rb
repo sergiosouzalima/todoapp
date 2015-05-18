@@ -1,6 +1,5 @@
 # encoding : utf-8
 require 'rails_helper'
-require 'shoulda/matchers'
 
 describe User do
   context "attributes validation" do
