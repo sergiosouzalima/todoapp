@@ -20,11 +20,9 @@
             <td><%= task.user.name unless task.user.blank? %></td>
             <td><%= link_to "#{task.sub_tasks.count} Itens", sub_tasks_path( id: task.id ) %></td>
             <td><%= link_to 'Mostrar', task %></td>
-            <td><%= if is_edition_allowed?(task.user_id, current_user.id)
-                      link_to 'Excluir', task, method: :delete, data: { confirm: 'Tem certeza?' }
-                    end
-                 %>
-             </td>
+            <td>
+              <%= link_to_if is_edition_allowed?(task.user_id, current_user.id), 'Excluir', task, method: :delete, data: { confirm: 'Tem certeza?' } %>
+            </td>
           </tr>
         <% end %>
       </tbody>
